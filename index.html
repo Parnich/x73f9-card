@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>PARNICH | Terminal</title>
+    <style>
+        :root {
+            --term-green: #00FF41;
+            --term-bg: #050505;
+            --term-dim: #008F11;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--term-bg);
+            color: var(--term-green);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin: 0 0 30px 0;
+            letter-spacing: 5px;
+            border-bottom: 2px dashed var(--term-dim);
+            padding-bottom: 10px;
+            word-wrap: break-word;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--term-dim);
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+
+        a {
+            color: var(--term-green);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        a:hover, a:active {
+            background-color: var(--term-green);
+            color: var(--term-bg);
+            text-decoration: none;
+        }
+
+        .links-section {
+            margin-bottom: 40px;
+        }
+
+        .links-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .links-section li {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .links-section li::before {
+            content: "> ";
+            color: var(--term-dim);
+        }
+
+        #site-status {
+            font-size: 0.9rem;
+            margin-left: 10px;
+            color: #888;
+        }
+
+        .status-online { color: var(--term-green) !important; }
+        .status-offline { color: red !important; }
+
+        details {
+            margin-bottom: 15px;
+            border: 1px solid var(--term-dim);
+            padding: 10px;
+            background-color: rgba(0, 255, 65, 0.02);
+        }
+
+        summary {
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            list-style: none;
+            outline: none;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        summary::before {
+            content: "[+] ";
+            color: var(--term-green);
+        }
+
+        details[open] summary::before {
+            content: "[-] ";
+        }
+
+        .subject-content {
+            margin-top: 15px;
+            padding-left: 15px;
+            border-left: 1px dashed var(--term-dim);
+        }
+
+        .subject-item {
+            margin-bottom: 20px;
+        }
+
+        .subject-item-title {
+            font-weight: bold;
+            color: #fff;
+            background-color: rgba(255,255,255, 0.1);
+            padding: 2px 6px;
+        }
+
+        .subject-item p {
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            border-top: 2px dashed var(--term-dim);
+            padding-top: 20px;
+        }
+
+        .cursor {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; letter-spacing: 2px; }
+            body { padding: 15px; font-size: 15px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>PARNICH<span class="cursor">_</span></h1>
+    </header>
+
+    <section class="links-section">
+        <ul>
+            <li><a href="https://t.me/parnich" target="_blank">Телеграм</a></li>
+            <li><a href="https://tiktok.com/@parnichor" target="_blank">ТикТок</a></li>
+            <li><a href="https://github.com/Parnich" target="_blank">GitHub</a></li>
+            <li><a href="https://steamcommunity.com/id/ScorpiSam/" target="_blank">Steam</a></li>
+            <li>
+                <a href="https://parnich.duckdns.org/" target="_blank">Мой сайт</a>
+                <span id="site-status">[ STATUS: PINGING... ]</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="tutoring">
+        <h2>> ОБУЧЕНИЕ И РЕПЕТИТОРСТВО</h2>
+        <p>Первые два урока по любому предмету бесплатно, дальше от 100 и до 700 рублей/час.</p>
+
+        <details>
+            <summary>Химия</summary>
+            <div class="subject-content">
+                <div class="subject-item">
+                    <span class="subject-item-title">/ ОГЭ /</span>
+                    <p>Подготовка к ОГЭ по химии, сроки год/пол года/месяц. В 2025-2026 учебном году 7 пятёрок, 4 четвёрки.</p>
+                </div>
+                <div class="subject-item">
+                    <span class="subject-item-title">/ ЕГЭ /</span>
+                    <p>Подготовка к ЕГЭ по химии по авторской методике. Особый упор на органическую химию.</p>
+                </div>
+                <div class="subject-item">
+                    <span class="subject-item-title">/ Органическая химия /</span>
+                    <p>Продвинутые органическая и немного био химии. Программа повышенной сложности.</p>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>Физика</summary>
+            <div class="subject-content">
+                <div class="subject-item">
+                    <span class="subject-item-title">/ ОГЭ /</span>
+                    <p>Подготовка к ОГЭ по физике, срок год/пол года. В 2025-2026 учебном году 11 пятёрок, 6 четвёрок.</p>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>Информатика</summary>
+            <div class="subject-content">
+                <div class="subject-item">
+                    <span class="subject-item-title">/ Программирование /</span>
+                    <p>Обучение "правильному" программировнию, основные идеи, изучение синтаксиса и особенностей rust, java и python.</p>
+                </div>
+                <div class="subject-item">
+                    <span class="subject-item-title">/ Общие концепции /</span>
+                    <p>Изучение общих концпеций информатики: системы счисления, графы, память. Идеально подходит как навёрстывание или обгон школьной программы.</p>
+                </div>
+                <div class="subject-item">
+                    <span class="subject-item-title">/ ОГЭ /</span>
+                    <p>Подготовка к ОГЭ по информатике, срок год/пол года/месяц. В 2025-2026 учебном году 11 пятёрок, 7 четвёрок.</p>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>Обществознание</summary>
+            <div class="subject-content">
+                <div class="subject-item">
+                    <span class="subject-item-title">/ Право /</span>
+                    <p>Основные концепции права. Отличное начало олимпиадного пути в этом направлении.</p>
+                </div>
+                <div class="subject-item">
+                    <span class="subject-item-title">/ Экономика /</span>
+                    <p>Полный курс экономики для любого уровня. Подходит как восьмиклассникам, так и аббитуриентам в вузы.</p>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>Математика</summary>
+            <div class="subject-content">
+                <div class="subject-item">
+                    <span class="subject-item-title">/ ОГЭ /</span>
+                    <p>Подготовка к ОГЭ по математие, срок год/пол года. В 2024-2025 и 2025-2026 учебных годах в сумме 6 пятёрок, 13 четвёрок.</p>
+                </div>
+                <div class="subject-item">
+                    <span class="subject-item-title">/ ЕГЭ /</span>
+                    <p>Подготовка к ЕГЭ по математике(база), срок год/пол года.</p>
+                </div>
+                <div class="subject-item">
+                    <span class="subject-item-title">/ Мат. анализ /</span>
+                    <p>Курс по математическом анализу для любителей любого уровня. От понятия графика до интегралов за год.</p>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <footer>
+        <p>> send_message --to parn1ch@yandex.ru</p>
+        <p>Остались вопросы? Напииши на почту выше или в телеграмм.</p>
+    </footer>
+</div>
+
+<script>
+    function checkSiteStatus() {
+        const statusEl = document.getElementById('site-status');
+
+        const targetUrl = 'https://parnich.duckdns.org/favicon.ico';
+
+        // Добавляем случайное число, чтобы браузер не брал картинку из кэша
+        const urlWithCacheBuster = targetUrl + '?t=' + new Date().getTime();
+
+        const img = new Image();
+
+        img.onload = () => {
+            statusEl.textContent = '[ STATUS: ONLINE ]';
+            statusEl.classList.remove('status-offline');
+            statusEl.classList.add('status-online');
+        };
+
+        img.onerror = () => {
+            statusEl.textContent = '[ STATUS: OFFLINE ]';
+            statusEl.classList.remove('status-online');
+            statusEl.classList.add('status-offline');
+        };
+
+        img.src = urlWithCacheBuster;
+    }
+
+    window.addEventListener('DOMContentLoaded', checkSiteStatus);
+</script>
+</body>
+</html>
